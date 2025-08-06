@@ -7,44 +7,59 @@
 --body-font: "Roboto", sans-serif;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: var(--body-font);
     color: var(--accent2-color);
 }
 
-header, main, footer{
+header,
+main,
+footer {
     width: 1000px;
     margin: 0 auto;
 }
 
-h1, h2{
+h1,
+h2 {
     font-family: var(--heading-font);
     color: var(--accent2-color);
 }
 
-nav, p, section, article {
+nav,
+p,
+section,
+article {
     margin: 16px;
     padding: 8px;
 }
 
+nav{
+    margin: 0;
+}
+nav, img{
+    border-radius: 0.6em;
+}
+
+
 .socialmedia a {
-    text-decoration: none; /*removes underlines on hyperlinks*/
+    text-decoration: none;
+    /*removes underlines on hyperlinks*/
 }
 
 /*header and nav*/
-header{
-    margin: 1rem auto;
-    padding: 1rem;
+header {
+    margin: 0.5rem auto;
     display: grid;
     grid-template-columns: 1fr 3fr;
     align-items: center;
-    border-bottom: 1px solid var(--primary-color);
+    background-color: var(--accent2-color);
+    border-radius: 0.6em;
 }
 
 header nav {
@@ -54,14 +69,14 @@ header nav {
     background-color: var(--accent2-color);
 }
 
-header nav a{
+header nav a {
     text-decoration: none;
     text-align: center;
     color: white;
 }
 
 header img {
-    width: 200px;
+    width: 100px;
     height: auto;
     justify-self: center;
 }
@@ -71,10 +86,24 @@ header img {
     position: relative;
 }
 
-.hero img { 
+.hero img {
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 0.6em;
+}
+
+#homebook{
+    background-color: transparent;
+    opacity: 1;
+}
+
+#homebook p{
+    text-align: center;
+    color: #ffff;
+    font-size:50px;
+    font-family: var(--heading-font);
+    text-shadow: 0 0 15px var(--accent2-color);
 }
 
 h1 {
@@ -111,9 +140,9 @@ h1 {
 .history {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-evenly;
     align-items: center;
     background-color: var(--accent1-color);
+    margin: 1em auto;
 }
 
 .history h2 {
@@ -140,6 +169,7 @@ h1 {
     justify-self: center;
     align-items: center;
     background-color: var(--secondary-color);
+    margin: 1em auto;
 }
 
 .adventure h2 {
@@ -149,13 +179,13 @@ h1 {
     border-bottom: 1px solid var(--primary-color);
 }
 
-.adventure img{
-    width: 200px;
+.adventure img {
+    width: 180px;
     height: auto;
     margin: 0.5rem;
 }
 
-.adventure figure{
+.adventure figure {
     justify-content: space-around;
     align-items: center;
     text-align: center;
@@ -165,24 +195,240 @@ h1 {
 /* Footer */
 footer {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    justify-content: space-between;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    border-top: 1px dotted var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 0.6em;
 }
 
 footer p {
     grid-column-start: 2;
 }
 
-footer nav{
+footer nav {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1em;
+    grid-template-columns: .5fr .5fr .5fr;
+    align-items: center;
 }
 
 footer nav img {
-    width: 40px;
-    height:auto;
+    width: 30px;
+    height: auto;
+    grid-column: 1 / span 2;
+    justify-self: center;
+    box-shadow: 1px 3px 5px var(--accent2-color);
 }
+
+/*Contact page*/
+.compinfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    text-align: left;
+    margin-top: 6.1em;
+}
+
+.compinfo h1 {
+    grid-column: 1 / span 2;
+    text-align: center;
+    justify-self: center;
+    margin: 1.8em auto;
+    padding: 0.5em;
+    font-size: 2.1rem;
+}
+
+.compinfo p {
+    font-style: italic;
+    font-size: larger;
+}
+
+.compinfo h4 {
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+}
+
+
+iframe {
+    width: 600px;
+    height: 250px;
+    border: 0;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 0.5em;
+    margin: 1em auto;
+    text-align: center;
+}
+
+.team img {
+    width: 200px;
+    height: auto;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 0 20px var(--accent2-color);
+}
+
+.team img:hover {
+    transform: scale(1.1);
+}
+
+.team figcaption {
+    font-size: large;
+    font-style: italic;
+}
+
+.userask h2 {
+    text-align: center;
+    font-size: 2.1rem;
+    margin: 1rem;
+}
+
+form {
+    width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1.5px solid var(--primary-color);
+    box-shadow: 0 0 15px var(--accent2-color);
+    border-radius: 0.7em;
+    display: grid;
+}
+
+fieldset {
+    display: grid;
+    margin: 0.5rem;
+    padding: 1rem;
+    border: 1.5px solid var(--primary-color);
+}
+
+legend {
+    font-family: var(--heading-font);
+    font-size: large;
+    padding: 0.5rem;
+}
+
+label {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+input,
+textarea {
+    margin: 0.3rem;
+    font-size: 1.1rem;
+}
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    vertical-align: bottom;
+}
+
+.form-item {
+    display: grid;
+    align-items: center;
+}
+
+.columns1 {
+    grid-template-columns: 1fr 3fr
+}
+
+.coulmns2 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#gen {
+    grid-column-start: 1;
+    place-items: center;
+}
+
+#res {
+    grid-column-start: 2;
+    place-items: center;
+}
+
+#sug {
+    grid-column-start: 3;
+    place-items: center;
+}
+
+#mess {
+    grid-column: 1 / span 3;
+}
+
+.toalign {
+    text-align: center;
+    align-items: center;
+    padding: 0.3em;
+}
+
+button {
+    margin: 1rem;
+    background-color: var(--accent2-color);
+    color: #F0F2FA;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    font-family: var(--heading-font);
+
+}
+
+button:hover {
+    background-color: var(--accent1-color);
+    color: var(--accent2-color);
+}
+
+a {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    text-decoration: none;
+    text-align: center;
+    align-self: center;
+    color: var(--accent2-color);
+    padding: 0.5em;
+    margin: 0.5em;
+    border-radius: 0.6em;
+    font-family: var(--heading-font);
+    
+}
+
+a:hover {
+    transform: scale(1.1);
+    background-color: var(--accent1-color);
+    color: var(--accent2-color);
+}
+
+#wireframe{
+    grid-column-start: 1;
+    grid-column-end: 3 ;
+}
+
+.tabs svg {
+    width: 24px;
+    height: 24px;
+    align-self: baseline;
+    color: var(--accent2-color);
+    fill: var(--accent1-color);
+}
+
+/*Form button overlay - Home Page*/
+.tripbook{
+    border: none;
+    box-shadow: 0 0 0 transparent;
+    width: 400px;
+    opacity: 100%;
+}
+
+.tripbook button{
+    font-size: 2.5rem;
+    box-shadow: 0 0 20px var(--accent2-color);
+}
+
